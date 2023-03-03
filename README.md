@@ -73,6 +73,8 @@ Realizar los ejercicios sin calculadora
 
 ![image](https://user-images.githubusercontent.com/116817673/222740891-fc1d5648-6255-45ef-907e-762d914dccfa.png)
 
+![image](https://user-images.githubusercontent.com/116817673/222746265-7d76b536-e1b8-442c-a4a0-5138402f35b9.png)
+
 ![image](https://user-images.githubusercontent.com/116817673/222733627-3952b94c-39f8-4f52-b33a-879b6895a5fa.png)
 
 ![image](https://user-images.githubusercontent.com/116817673/222733786-62b04c7a-72fa-4d47-a021-276642d7535e.png)
