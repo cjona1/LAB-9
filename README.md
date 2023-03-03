@@ -1,6 +1,5 @@
 # LAB-9
 
-LABORATORIO-9
 PRÁCTICA Nº 9 FASORES
 
 Universidad de las Fuerzas Armadas "ESPE"
@@ -11,7 +10,7 @@ Materia: Fundamentos de los Circuitos Eléctricos.
 
 ![image](https://user-images.githubusercontent.com/116817673/222731315-62619ccf-677d-4801-be69-58b73552a14f.png)
 
-LABORATORIO 9
+LABORATORIO 9	     
 
 Integrantes: Joel Oña, Dylan Taco y Cristian Toaquiza.
 
@@ -20,7 +19,9 @@ NRC: 10063
 Sangolquí, 24 de febrero del 2022
 
 	PRACTICA-No.9-Fasores.
+	
 1. OBJETIVOS
+
 OBJETIVO GENERAL
 
 Realizar operaciones aritméticas con números complejos, tanto en su forma polar como rectangular.
@@ -69,6 +70,8 @@ Realizar los ejercicios sin calculadora
 ![image](https://user-images.githubusercontent.com/116817673/222733312-c78ab331-fbf8-40f5-8884-749170506bd4.png)
 
 ![image](https://user-images.githubusercontent.com/116817673/222733345-8f5294c7-63fb-408c-bf8c-f8aadedba94f.png)
+
+![image](https://user-images.githubusercontent.com/116817673/222740891-fc1d5648-6255-45ef-907e-762d914dccfa.png)
 
 ![image](https://user-images.githubusercontent.com/116817673/222733627-3952b94c-39f8-4f52-b33a-879b6895a5fa.png)
 
@@ -126,12 +129,12 @@ b
 
 ![image](https://user-images.githubusercontent.com/116817673/222737344-640a93f9-e5d8-467a-abcf-3d15f721103d.png)
 
-
 C
 
 ![image](https://user-images.githubusercontent.com/116817673/222735653-72668f93-afc6-4530-b75d-b8875ae47754.png)
 
 ![image](https://user-images.githubusercontent.com/116817673/222735962-538959b1-6f24-4684-abb5-d874365f66e2.png)
+
 
 4. CÁLCULO DE ERROR.
 
@@ -140,11 +143,13 @@ C
 ![image](https://user-images.githubusercontent.com/116817673/222735729-e35aded3-53f8-4c00-8cd7-fa907b3ae079.png)
 
 5. VÍDEO
+
 Enlace adjunto donde se explica el laboratorio 9:
 
 => https://youtu.be/e_Jj0cgaU34
 
 6. CONCLUSIONES
+
 -Las diferentes operaciones aritmeticas con numeros complejos son muy importantes para el analisis y resolucion de ejercicios en fasores y circuitos de CA
 
 -Se pudo ver que los numeros complejos ayudan a dar una descripcion mas adecuada de las senales periodicas variables, ademas son usados ​​en la teoria del control,en donde los sistemas son transformados del dominio del tiempo al dominio de la frecuencia usando transformaciones de Laplace. Los polos y los ceros del sistema son analizados en el plano complejo.
@@ -152,4 +157,5 @@ Enlace adjunto donde se explica el laboratorio 9:
 -Aprendimos a usar la suma, resta y división de números complejos para realizar la conversión de forma pola a rectangular y viceversa.
 
 7. BIBLIOGRAFÍA
+
 Floyd, TL (2007). Principios de Circuitos Eléctricos. México: Pearson Educación. https://drive.google.com/file/d/1cGAWCJ4-yhAe1LyAXvmOeUhEmQVLy-zv/view
