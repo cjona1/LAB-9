@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project title="Plano Control 6 Motores - Joel Oña" version="0.100.0">
+    <properties>
+        <property name="saveddate" show="1">11/6/2026</property>
+        <property name="saveddate-eu" show="1">11-06-2026</property>
+        <property name="saveddate-us" show="1">2026-06-11</property>
+        <property name="savedfilename" show="1">Control_6_Motores_Joel_Ona</property>
+        <property name="savedfilepath" show="1">C:/Users/Joel/Documents/Control_6_Motores_Joel_Ona.qet</property>
+        <property name="savedtime" show="1">14:30</property>
+        <property name="author" show="1">Joel Oña</property>
+    </properties>
+
+    <!-- ============================================= -->
+    <!-- DIAGRAMA 1: CIRCUITO DE POTENCIA (6 MOTORES) -->
+    <!-- ============================================= -->
+    <diagram title="Circuito de Potencia - 6 Motores (5 DOL + 1 Estrella)" cols="20" rows="12" colsize="60" rowsize="80" author="Joel Oña" date="11/06/2026" version="0.100.0">
+        <defaultconductor type="multi" condsize="1" dash-size="2"/>
+
+        <elements>
+            <!-- BORNERA PRINCIPAL 3P+N+PE -->
+            <element type="element" x="50" y="500" width="100" height="40" orientation="0">
+                <name>Terminal block 3P+N+PE</name>
+                <terminals>
+                    <terminal x="0" y="-10" orientation="n"/>
+                    <terminal x="25" y="-10" orientation="n"/>
+                    <terminal x="50" y="-10" orientation="n"/>
+                    <terminal x="75" y="-10" orientation="n"/>
+                    <terminal x="100" y="-10" orientation="n"/>
+                    <terminal x="0" y="10" orientation="s"/>
+                    <terminal x="25" y="10" orientation="s"/>
+                    <terminal x="50" y="10" orientation="s"/>
+                    <terminal x="75" y="10" orientation="s"/>
+                    <terminal x="100" y="10" orientation="s"/>
+                </terminals>
+                <texts>
+                    <text x="0" y="-18">L1</text>
+                    <text x="25" y="-18">L2</text>
+                    <text x="50" y="-18">L3</text>
+                    <text x="75" y="-18">N</text>
+                    <text x="100" y="-18">PE</text>
+                </texts>
+            </element>
+
+            <!-- DISYUNTOR GENERAL QF1 -->
+            <element type="element" x="50" y="380" width="60" height="70" orientation="0">
+                <name>Circuit-breaker 3P</name>
+                <informations label="-QF1"/>
+                <terminals>
+                    <terminal x="-20" y="-36" orientation="n"/>
+                    <terminal x="0" y="-36" orientation="n"/>
+                    <terminal x="20" y="-36" orientation="n"/>
+                    <terminal x="-20" y="36" orientation="s"/>
+                    <terminal x="0" y="36" orientation="s"/>
+                    <terminal x="20" y="36" orientation="s"/>
+                </terminals>
+                <texts>
+                    <text x="-75" y="-20">-QF1</text>
+                    <text x="-30" y="-50">1</text>
+                    <text x="-10" y="-50">3</text>
+                    <text x="10" y="-50">5</text>
+                    <text x="-30" y="45">2</text>
+                    <text x="-10" y="45">4</text>
+                    <text x="10" y="45">6</text>
+                </texts>
+            </element>
+
+            <!-- ========== MOTOR 1 (DOL - MA1) ========== -->
+            <element type="element" x="150" y="250" width="60" height="70" orientation="0">
+                <name>Magneto-thermal circuit breaker GV</name>
+                <informations label="-QA1"/>
+                <terminals>
+                    <terminal x="-20" y="-36" orientation="n"/>
+                    <terminal x="0" y="-36" orientation="n"/>
+                    <terminal x="20" y="-36" orientation="n"/>
+                    <terminal x="-20" y="36" orientation="s"/>
+                    <terminal x="0" y="36" orientation="s"/>
+                    <terminal x="20" y="36" orientation="s"/>
+                </terminals>
+                <texts>
+                    <text x="-75" y="-15">-QA1</text>
+                    <text x="-30" y="-50">1</text>
+                    <text x="-10" y="-50">3</text>
+                    <text x="10" y="-50">5</text>
+                </texts>
+            </element>
+
+            <element type="element" x="150" y="320" width="60" height="60" orientation="0">
+                <name>Contact power contactor</name>
+                <informations label="-KM1"/>
+                <terminals>
+                    <terminal x="-20" y="-16" orientation="n"/>
+                    <terminal x="0" y="-16" orientation="n"/>
+                    <terminal x="20" y="-16" orientation="n"/>
+                    <terminal x="-20" y="16" orientation="s"/>
+                    <terminal x="0" y="16" orientation="s"/>
+                    <terminal x="20" y="16" orientation="s"/>
+                </terminals>
+                <texts>
+                    <text x="-75" y="-10">-KM1</text>
+                </texts>
+            </element>
+
+            <element type="element" x="150" y="420" width="70" height="70" orientation="0">
+                <name>Three-phase engine</name>
+                <informations label="-MA1"/>
+                <terminals>
+                    <terminal x="-20" y="-20" orientation="n"/>
+                    <terminal x="0" y="-20" orientation="n"/>
+                    <terminal x="20" y="-20" orientation="n"/>
+                    <terminal x="30" y="20" orientation="e"/>
+                </terminals>
+                <texts>
+                    <text x="-60" y="-5">-MA1</text>
+                    <text x="-30" y="-15">U1</text>
+                    <text x="-5" y="-15">V1</text>
+                    <text x="20" y="-15">W1</text>
+                </texts>
+            </element>
+
+            <!-- ========== MOTOR 2 (DOL - MA2) ========== -->
+            <element type="element" x="280" y="250" width="60" height="70" orientation="0">
+                <name>Magneto-thermal circuit breaker GV</name>
+                <informations label="-QA2"/>
+                <terminals>
+                    <terminal x="-20" y="-36" orientation="n"/>
+                    <terminal x="0" y="-36" orientation="n"/>
+                    <terminal x="20" y="-36" orientation="n"/>
+                    <terminal x="-20" y="36" orientation="s"/>
+                    <terminal x="0" y="36" orientation="s"/>
+                    <terminal x="20" y="36" orientation="s"/>
+                </terminals>
+                <texts>
+                    <text x="-75" y="-15">-QA2</text>
+                </texts>
+            </element>
+
+            <element type="element" x="280" y="320" width="60" height="60" orientation="0">
+                <name>Contact power contactor</name>
+                <informations label="-KM2"/>
+                <terminals>
+                    <terminal x="-20" y="-16" orientation="n"/>
+                    <terminal x="0" y="-16" orientation="n"/>
+                    <terminal x="20" y="-16" orientation="n"/>
+                    <terminal x="-20" y="16" orientation="s"/>
+                    <terminal x="0" y="16" orientation="s"/>
+                    <terminal x="20" y="16" orientation="s"/>
+                </terminals>
+                <texts>
+                    <text x="-75" y="-10">-KM2</text>
+                </texts>
+            </element>
+
+            <element type="element" x="280" y="420" width="70" height="70" orientation="0">
+                <name>Three-phase engine</name>
+                <informations label="-MA2"/>
+                <terminals>
+                    <terminal x="-20" y="-20" orientation="n"/>
+                    <terminal x="0" y="-20" orientation="n"/>
+                    <terminal x="20" y="-20" orientation="n"/>
+                    <terminal x="30" y="20" orientation="e"/>
+                </terminals>
+                <texts>
+                    <text x="-60" y="-5">-MA2</text>
+                </texts>
+            </element>
+
+            <!-- ========== MOTOR 3 (DOL - MA3) ========== -->
+            <element type="element" x="410" y="250" width="60" height="70" orientation="0">
+                <name>Magneto-thermal circuit breaker GV</name>
+                <informations label="-QA3"/>
+            </element>
+            <element type="element" x="410" y="320" width="60" height="60" orientation="0">
+                <name>Contact power contactor</name>
+                <informations label="-KM3"/>
+            </element>
+            <element type="element" x="410" y="420" width="70" height="70" orientation="0">
+                <name>Three-phase engine</name>
+                <informations label="-MA3"/>
+            </element>
+
+            <!-- ========== MOTOR 4 (DOL - MA4) ========== -->
+            <element type="element" x="540" y="250" width="60" height="70" orientation="0">
+                <name>Magneto-thermal circuit breaker GV</name>
+                <informations label="-QA4"/>
+            </element>
+            <element type="element" x="540" y="320" width="60" height="60" orientation="0">
+                <name>Contact power contactor</name>
+                <informations label="-KM4"/>
+            </element>
+            <element type="element" x="540" y="420" width="70" height="70" orientation="0">
+                <name>Three-phase engine</name>
+                <informations label="-MA4"/>
+            </element>
+
+            <!-- ========== MOTOR 5 (DOL - MA5) ========== -->
+            <element type="element" x="670" y="250" width="60" height="70" orientation="0">
+                <name>Magneto-thermal circuit breaker GV</name>
+                <informations label="-QA5"/>
+            </element>
+            <element type="element" x="670" y="320" width="60" height="60" orientation="0">
+                <name>Contact power contactor</name>
+                <informations label="-KM5"/>
+            </element>
+            <element type="element" x="670" y="420" width="70" height="70" orientation="0">
+                <name>Three-phase engine</name>
+                <informations label="-MA5"/>
+            </element>
+
+            <!-- ========== MOTOR 6 (ESTRELLA - MA6) ========== -->
+            <!-- Disyuntor motorizado -->
+            <element type="element" x="800" y="230" width="60" height="70" orientation="0">
+                <name>Magneto-thermal circuit breaker GV</name>
+                <informations label="-QA6"/>
+            </element>
+
+            <!-- Contactor de línea (estrella) -->
+            <element type="element" x="800" y="300" width="60" height="60" orientation="0">
+                <name>Contact power contactor</name>
+                <informations label="-KM6"/>
+            </element>
+
+            <!-- Motor conexión estrella (6 bornes para Y-Δ) -->
+            <element type="element" x="800" y="400" width="70" height="80" orientation="0">
+                <name>Six-phase engine (double winding)</name>
+                <informations label="-MA6"/>
+                <terminals>
+                    <terminal x="-20" y="-30" orientation="n"/>
+                    <terminal x="0" y="-30" orientation="n"/>
+                    <terminal x="20" y="-30" orientation="n"/>
+                    <terminal x="-20" y="30" orientation="s"/>
+                    <terminal x="0" y="30" orientation="s"/>
+                    <terminal x="20" y="30" orientation="s"/>
+                    <terminal x="30" y="20" orientation="e"/>
+                </terminals>
+                <texts>
+                    <text x="-60" y="-5">-MA6</text>
+                    <text x="-35" y="-25">U1</text>
+                    <text x="-10" y="-25">V1</text>
+                    <text x="15" y="-25">W1</text>
+                    <text x="-35" y="35">U2</text>
+                    <text x="-10" y="35">V2</text>
+                    <text x="15" y="35">W2</text>
+                    <text x="-30" y="-5">ESTRELLA</text>
+                </texts>
+            </element>
+
+            <!-- Puente de estrella (bornes U2, V2, W2 cortocircuitados) -->
+            <text x="770" y="480" font="9">Puente de conexión estrella</text>
+            <line x1="780" y1="440" x2="820" y2="440" style="line-weight:normal"/>
+            <line x1="780" y1="455" x2="820" y2="455" style="line-weight:normal"/>
+            <line x1="780" y1="470" x2="820" y2="470" style="line-weight:normal"/>
+
+            <!-- CONEXIONES ELÉCTRICAS RESUMIDAS -->
+            <!-- Alimentación desde QF1 a QA1-QA6 -->
+            <!-- L1, L2, L3 desde QF1 hacia cada disyuntor -->
+        </elements>
+
+        <inputs>
+            <input x="30" y="50">3~380V AC, 60Hz</input>
+            <input x="30" y="70">Autor: Joel Oña</input>
+            <input x="30" y="90">Fecha: Junio 2026</input>
+            <input x="800" y="200" font="10">MOTOR 6 - CONEXIÓN ESTRELLA</input>
+            <input x="150" y="210" font="10">MOTOR 1 (DOL)</input>
+            <input x="280" y="210" font="10">MOTOR 2 (DOL)</input>
+            <input x="410" y="210" font="10">MOTOR 3 (DOL)</input>
+            <input x="540" y="210" font="10">MOTOR 4 (DOL)</input>
+            <input x="670" y="210" font="10">MOTOR 5 (DOL)</input>
+        </inputs>
+    </diagram>
+
+    <!-- ============================================= -->
+    <!-- DIAGRAMA 2: CIRCUITO DE CONTROL -->
+    <!-- ============================================= -->
+    <diagram title="Circuito de Control - 6 Motores" cols="20" rows="12" colsize="60" rowsize="80" author="Joel Oña" date="11/06/2026" version="0.100.0">
+        <defaultconductor type="multi" condsize="1" dash-size="2"/>
+
+        <elements>
+            <!-- FUENTE DE ALIMENTACIÓN -->
+            <element type="element" x="50" y="100" width="20" height="60" orientation="0">
+                <name>Three-pole source + PE +N</name>
+                <texts>
+                    <text x="-30" y="20">L1</text>
+                    <text x="-30" y="0">N</text>
+                </texts>
+            </element>
+
+            <!-- PROTECCIÓN GENERAL DEL CONTROL -->
+            <element type="element" x="100" y="80" width="20" height="40" orientation="0">
+                <name>Circuit-breaker 1P</name>
+                <informations label="-QF11"/>
+                <texts>
+                    <text x="-30" y="-5">-QF11</text>
+                    <text x="-15" y="-15">1</text>
+                    <text x="-15" y="25">2</text>
+                </texts>
+            </element>
+
+            <!-- PARADA DE EMERGENCIA GENERAL -->
+            <element type="element" x="150" y="80" width="20" height="40" orientation="0">
+                <name>Push-button (NC)</name>
+                <informations label="-SE1"/>
+                <texts>
+                    <text x="-50" y="-5">-SE1</text>
+                    <text x="25" y="-5">EMERGENCIA</text>
+                </texts>
+            </element>
+
+            <!-- ========== CONTROL MOTOR 1 (KM1) ========== -->
+            <!-- Pulsador Marcha -->
+            <element type="element" x="230" y="80" width="20" height="40" orientation="0">
+                <name>Push-button</name>
+                <informations label="-SF1"/>
+                <texts>
+                    <text x="-50" y="-5">-SF1</text>
+                    <text x="25" y="-5">MARCHA M1</text>
+                </texts>
+            </element>
+
+            <!-- Pulsador Parada -->
+            <element type="element" x="280" y="80" width="20" height="40" orientation="0">
+                <name>Push-button (NC)</name>
+                <informations label="-SP1"/>
+                <texts>
+                    <text x="-50" y="-5">-SP1</text>
+                    <text x="25" y="-5">PARADA M1</text>
+                </texts>
+            </element>
+
+            <!-- Contacto auxiliar de enclavamiento KM1 -->
+            <element type="element" x="330" y="80" width="20" height="40" orientation="0">
+                <name>Simple contact</name>
+                <informations label="-KM1"/>
+            </element>
+
+            <!-- Contacto NA del disyuntor QA1 (protección térmica) -->
+            <element type="element" x="380" y="80" width="20" height="40" orientation="0">
+                <name>Contact NO circuit-breaker GV</name>
+                <informations label="-QA1"/>
+                <texts>
+                    <text x="-75" y="-10">-QA1 (protección)</text>
+                </texts>
+            </element>
+
+            <!-- Bobina contactor KM1 -->
+            <element type="element" x="430" y="80" width="20" height="40" orientation="0">
+                <name>Coil</name>
+                <informations label="-KM1"/>
+                <texts>
+                    <text x="-35" y="-5">-KM1</text>
+                </texts>
+            </element>
+
+            <!-- ========== CONTROL MOTOR 2 (KM2) ========== -->
+            <element type="element" x="230" y="180" width="20" height="40" orientation="0">
+                <name>Push-button</name>
+                <informations label="-SF2"/>
+                <texts>
+                    <text x="-50" y="-5">-SF2</text>
+                    <text x="25" y="-5">MARCHA M2</text>
+                </texts>
+            </element>
+            <element type="element" x="280" y="180" width="20" height="40" orientation="0">
+                <name>Push-button (NC)</name>
+                <informations label="-SP2"/>
+            </element>
+            <element type="element" x="330" y="180" width="20" height="40" orientation="0">
+                <name>Simple contact</name>
+                <informations label="-KM2"/>
+            </element>
+            <element type="element" x="380" y="180" width="20" height="40" orientation="0">
+                <name>Contact NO circuit-breaker GV</name>
+                <informations label="-QA2"/>
+            </element>
+            <element type="element" x="430" y="180" width="20" height="40" orientation="0">
+                <name>Coil</name>
+                <informations label="-KM2"/>
+            </element>
+
+            <!-- ========== CONTROL MOTOR 3 (KM3) ========== -->
+            <element type="element" x="230" y="280" width="20" height="40" orientation="0">
+                <name>Push-button</name>
+                <informations label="-SF3"/>
+            </element>
+            <element type="element" x="280" y="280" width="20" height="40" orientation="0">
+                <name>Push-button (NC)</name>
+                <informations label="-SP3"/>
+            </element>
+            <element type="element" x="330" y="280" width="20" height="40" orientation="0">
+                <name>Simple contact</name>
+                <informations label="-KM3"/>
+            </element>
+            <element type="element" x="380" y="280" width="20" height="40" orientation="0">
+                <name>Contact NO circuit-breaker GV</name>
+                <informations label="-QA3"/>
+            </element>
+            <element type="element" x="430" y="280" width="20" height="40" orientation="0">
+                <name>Coil</name>
+                <informations label="-KM3"/>
+            </element>
+
+            <!-- ========== CONTROL MOTOR 4 (KM4) ========== -->
+            <element type="element" x="530" y="80" width="20" height="40" orientation="0">
+                <name>Push-button</name>
+                <informations label="-SF4"/>
+            </element>
+            <element type="element" x="580" y="80" width="20" height="40" orientation="0">
+                <name>Push-button (NC)</name>
+                <informations label="-SP4"/>
+            </element>
+            <element type="element" x="630" y="80" width="20" height="40" orientation="0">
+                <name>Simple contact</name>
+                <informations label="-KM4"/>
+            </element>
+            <element type="element" x="680" y="80" width="20" height="40" orientation="0">
+                <name>Contact NO circuit-breaker GV</name>
+                <informations label="-QA4"/>
+            </element>
+            <element type="element" x="730" y="80" width="20" height="40" orientation="0">
+                <name>Coil</name>
+                <informations label="-KM4"/>
+            </element>
+
+            <!-- ========== CONTROL MOTOR 5 (KM5) ========== -->
+            <element type="element" x="530" y="180" width="20" height="40" orientation="0">
+                <name>Push-button</name>
+                <informations label="-SF5"/>
+            </element>
+            <element type="element" x="580" y="180" width="20" height="40" orientation="0">
+                <name>Push-button (NC)</name>
+                <informations label="-SP5"/>
+            </element>
+            <element type="element" x="630" y="180" width="20" height="40" orientation="0">
+                <name>Simple contact</name>
+                <informations label="-KM5"/>
+            </element>
+            <element type="element" x="680" y="180" width="20" height="40" orientation="0">
+                <name>Contact NO circuit-breaker GV</name>
+                <informations label="-QA5"/>
+            </element>
+            <element type="element" x="730" y="180" width="20" height="40" orientation="0">
+                <name>Coil</name>
+                <informations label="-KM5"/>
+            </element>
+
+            <!-- ========== CONTROL MOTOR 6 (KM6) - ESTRELLA ========== -->
+            <element type="element" x="530" y="280" width="20" height="40" orientation="0">
+                <name>Push-button</name>
+                <informations label="-SF6"/>
+            </element>
+            <element type="element" x="580" y="280" width="20" height="40" orientation="0">
+                <name>Push-button (NC)</name>
+                <informations label="-SP6"/>
+            </element>
+            <element type="element" x="630" y="280" width="20" height="40" orientation="0">
+                <name>Simple contact</name>
+                <informations label="-KM6"/>
+            </element>
+            <element type="element" x="680" y="280" width="20" height="40" orientation="0">
+                <name>Contact NO circuit-breaker GV</name>
+                <informations label="-QA6"/>
+            </element>
+            <element type="element" x="730" y="280" width="20" height="40" orientation="0">
+                <name>Coil</name>
+                <informations label="-KM6"/>
+                <texts>
+                    <text x="-35" y="-5">-KM6 (Estrella)</text>
+                </texts>
+            </element>
+
+            <!-- NEUTRO COMÚN -->
+            <line x1="430" y1="120" x2="730" y2="120" style="line-weight:normal"/>
+            <line x1="430" y1="220" x2="730" y2="220" style="line-weight:normal"/>
+            <line x1="430" y1="320" x2="730" y2="320" style="line-weight:normal"/>
+            <text x="580" y="340">RETORNO A NEUTRO (N)</text>
+        </elements>
+
+        <inputs>
+            <input x="50" y="50">Circuito de Control 220V AC</input>
+            <input x="50" y="70">Autor: Joel Oña</input>
+        </inputs>
+    </diagram>
+</project>
