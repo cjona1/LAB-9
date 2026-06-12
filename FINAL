@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project title="Control 6 Motores - Joel Oña" version="0.100.0">
+    <properties>
+        <property name="saveddate" show="1">11/6/2026</property>
+        <property name="saveddate-eu" show="1">11-06-2026</property>
+        <property name="saveddate-us" show="1">2026-06-11</property>
+        <property name="savedfilename" show="1">Joel_Oña_6_Motores</property>
+        <property name="savedfilepath" show="1">C:/Users/Joel/Documents/Joel_Oña_6_Motores.qet</property>
+        <property name="savedtime" show="1">15:30</property>
+        <property name="author" show="1">Joel Oña</property>
+    </properties>
+
+    <newdiagrams>
+        <border cols="20" colsize="60" rows="12" displaycols="true" displayrows="true" rowsize="80"/>
+        <inset date="null" title="" auto_page_num="" displayAt="bottom" filename="" author="Joel Oña" plant="" locmach="" indexrev="" folio="%id/%total" version=""/>
+        <conductors num="_" conductor_color="" type="multi" displaytext="1" onetextperfolio="0" vertirotatetext="270" color2="#000000" horizrotatetext="0" bicolor="false" condsize="1" numsize="7" tension_protocol="" bus="" dash-size="2" conductor_section="" vertical-alignment="AlignRight" function="" horizontal-alignment="AlignBottom" text_color="#000000" cable="" formula=""/>
+        <report label="%f-%l%c"/>
+        <xrefs>
+            <xref type="protection" displayhas="cross" offset="0" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" switchprefix="" powerprefix="" snapto="label" xrefpos="" master_label="%f-%l%c"/>
+            <xref type="coil" displayhas="cross" offset="0" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" switchprefix="" powerprefix="" snapto="label" xrefpos="" master_label="%f-%l%c"/>
+            <xref type="commutator" displayhas="cross" offset="0" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" switchprefix="" powerprefix="" snapto="label" xrefpos="" master_label="%f-%l%c"/>
+        </xrefs>
+        <conductors_autonums freeze_new_conductors="false" current_autonum=""/>
+        <folio_autonums/>
+        <element_autonums freeze_new_elements="false" current_autonum=""/>
+    </newdiagrams>
+
+    <!-- ============================================= -->
+    <!-- DIAGRAMA 1: CIRCUITO DE POTENCIA -->
+    <!-- ============================================= -->
+    <diagram title="Circuito de Potencia - 6 Motores (5 DOL + 1 Estrella)" cols="20" rows="12" colsize="60" rowsize="80" height="960" width="1200" filename="" order="1" date="11/06/2026" author="Joel Oña" version="0.100.0" freezeNewConductor="false" displayAt="bottom" auto_page_num="1" folio="1/2" displayrows="true" freezeNewElement="false">
+        
+        <defaultconductor num="_" conductor_color="" type="multi" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" bicolor="false" condsize="1" numsize="7" tension_protocol="" bus="" dash-size="2" conductor_section="" vertical-alignment="AlignRight" function="" horizontal-alignment="AlignBottom" text_color="#000000" cable="" formula=""/>
+
+        <elements>
+            <!-- TEXTO DE ENCABEZADO -->
+            <inputs>
+                <input x="20" y="20" font="Liberation Sans,12,-1,5,75,0,0,0,0,0,Bold">CIRCUITO DE POTENCIA - 6 MOTORES</input>
+                <input x="20" y="40" font="Liberation Sans,10,-1,5,50,0,0,0,0,0,Regular">Autor: Joel Oña | Fecha: Junio 2026</input>
+                <input x="20" y="60" font="Liberation Sans,10,-1,5,50,0,0,0,0,0,Regular">Alimentación: 3~380VAC + N + PE, 60Hz</input>
+            </inputs>
+
+            <!-- BORNERA PRINCIPAL 3P+N+PE -->
+            <element type="embed://import/10_electric/10_allpole/130_terminals_terminal_strips/bornier5x.elmt" x="50" y="520" z="10" freezeLabel="false" prefix="X" uuid="{bornier1}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-6" id="0" orientation="0"/>
+                    <terminal x="20" y="-6" id="1" orientation="0"/>
+                    <terminal x="40" y="-6" id="2" orientation="0"/>
+                    <terminal x="60" y="-6" id="3" orientation="0"/>
+                    <terminal x="80" y="-6" id="4" orientation="0"/>
+                    <terminal x="0" y="6" id="5" orientation="2"/>
+                    <terminal x="20" y="6" id="6" orientation="2"/>
+                    <terminal x="40" y="6" id="7" orientation="2"/>
+                    <terminal x="60" y="6" id="8" orientation="2"/>
+                    <terminal x="80" y="6" id="9" orientation="2"/>
+                </terminals>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="-1" rotation="270" font="Liberation Sans,6,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{txt_l1}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop"><text>L1</text></dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="20" y="-1" rotation="270" font="Liberation Sans,6,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{txt_l2}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop"><text>L2</text></dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="40" y="-1" rotation="270" font="Liberation Sans,6,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{txt_l3}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop"><text>L3</text></dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="60" y="-1" rotation="270" font="Liberation Sans,6,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{txt_n}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop"><text>N</text></dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="80" y="-1" rotation="270" font="Liberation Sans,6,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{txt_pe}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop"><text>PE</text></dynamic_elmt_text>
+                </dynamic_texts>
+            </element>
+
+            <!-- DISYUNTOR GENERAL QF1 -->
+            <element type="embed://import/10_electric/10_allpole/200_fuses_protective_gears/11_circuit_breakers/disjonct-m_3f.elmt" x="50" y="420" z="10" freezeLabel="false" prefix="Q" uuid="{qf1}" orientation="0">
+                <terminals>
+                    <terminal x="-20" y="-26" id="10" orientation="0"/>
+                    <terminal x="0" y="-26" id="11" orientation="0"/>
+                    <terminal x="20" y="-26" id="12" orientation="0"/>
+                    <terminal x="-20" y="16" id="13" orientation="2"/>
+                    <terminal x="0" y="16" id="14" orientation="2"/>
+                    <terminal x="20" y="16" id="15" orientation="2"/>
+                </terminals>
+                <elementInformations>
+                    <elementInformation name="label" show="1">-QF1</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-19" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_qf1}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-QF1</text><info_name>label</info_name></dynamic_elmt_text>
+                </dynamic_texts>
+            </element>
+
+            <!-- BARRA DE DISTRIBUCION -->
+            <inputs>
+                <input x="80" y="380" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular">BARRA DE DISTRIBUCIÓN</input>
+            </inputs>
+
+            <!-- ========== MOTOR 1 (DOL) ========== -->
+            <!-- QA1 -->
+            <element type="embed://import/10_electric/10_allpole/200_fuses_protective_gears/12_magneto_thermal_circuit_breakers/disjoncteur_magneto-thermique.elmt" x="200" y="250" z="10" freezeLabel="false" prefix="Q" uuid="{qa1}" orientation="0">
+                <terminals>
+                    <terminal x="-20" y="-36" id="20" orientation="0"/>
+                    <terminal x="0" y="-36" id="21" orientation="0"/>
+                    <terminal x="20" y="-36" id="22" orientation="0"/>
+                    <terminal x="-20" y="36" id="23" orientation="2"/>
+                    <terminal x="0" y="36" id="24" orientation="2"/>
+                    <terminal x="20" y="36" id="25" orientation="2"/>
+                </terminals>
+                <elementInformations>
+                    <elementInformation name="label" show="1">-QA1</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-15" rotation="0" font="Liberation Sans,8,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_qa1}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-QA1</text><info_name>label</info_name></dynamic_elmt_text>
+                </dynamic_texts>
+            </element>
+
+            <!-- KM1 -->
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/02_power_contacts/com_puiss4.elmt" x="200" y="340" z="10" freezeLabel="false" prefix="K" uuid="{km1}" orientation="0">
+                <terminals>
+                    <terminal x="-20" y="-16" id="30" orientation="0"/>
+                    <terminal x="0" y="-16" id="31" orientation="0"/>
+                    <terminal x="20" y="-16" id="32" orientation="0"/>
+                    <terminal x="-20" y="16" id="33" orientation="2"/>
+                    <terminal x="0" y="16" id="34" orientation="2"/>
+                    <terminal x="20" y="16" id="35" orientation="2"/>
+                </terminals>
+                <elementInformations>
+                    <elementInformation name="label" show="1">-KM1</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-10" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="7" uuid="{lbl_km1}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-KM1</text><info_name>label</info_name></dynamic_elmt_text>
+                </dynamic_texts>
+            </element>
+
+            <!-- MA1 -->
+            <element type="embed://import/10_electric/10_allpole/391_consumers_actuators/10_engines/moteur_tri_1.elmt" x="200" y="440" z="10" freezeLabel="false" prefix="M" uuid="{ma1}" orientation="0">
+                <terminals>
+                    <terminal x="-20" y="-16" id="40" orientation="0"/>
+                    <terminal x="0" y="-16" id="41" orientation="0"/>
+                    <terminal x="20" y="-16" id="42" orientation="0"/>
+                    <terminal x="26" y="20" id="43" orientation="1"/>
+                </terminals>
+                <elementInformations>
+                    <elementInformation name="label" show="1">-MA1</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-60" y="-2" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_ma1}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-MA1</text><info_name>label</info_name></dynamic_elmt_text>
+                </dynamic_texts>
+            </element>
+
+            <inputs>
+                <input x="200" y="230" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Bold">MOTOR 1 (DOL)</input>
+            </inputs>
+
+            <!-- ========== MOTOR 2 (DOL) ========== -->
+            <element type="embed://import/10_electric/10_allpole/200_fuses_protective_gears/12_magneto_thermal_circuit_breakers/disjoncteur_magneto-thermique.elmt" x="350" y="250" z="10" freezeLabel="false" prefix="Q" uuid="{qa2}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-QA2</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-15" rotation="0" font="Liberation Sans,8,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_qa2}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-QA2</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/02_power_contacts/com_puiss4.elmt" x="350" y="340" z="10" freezeLabel="false" prefix="K" uuid="{km2}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-KM2</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-10" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="7" uuid="{lbl_km2}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-KM2</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/391_consumers_actuators/10_engines/moteur_tri_1.elmt" x="350" y="440" z="10" freezeLabel="false" prefix="M" uuid="{ma2}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-MA2</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-60" y="-2" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_ma2}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-MA2</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <inputs><input x="350" y="230" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Bold">MOTOR 2 (DOL)</input></inputs>
+
+            <!-- ========== MOTOR 3 (DOL) ========== -->
+            <element type="embed://import/10_electric/10_allpole/200_fuses_protective_gears/12_magneto_thermal_circuit_breakers/disjoncteur_magneto-thermique.elmt" x="500" y="250" z="10" freezeLabel="false" prefix="Q" uuid="{qa3}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-QA3</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-15" rotation="0" font="Liberation Sans,8,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_qa3}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-QA3</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/02_power_contacts/com_puiss4.elmt" x="500" y="340" z="10" freezeLabel="false" prefix="K" uuid="{km3}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-KM3</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-10" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="7" uuid="{lbl_km3}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-KM3</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/391_consumers_actuators/10_engines/moteur_tri_1.elmt" x="500" y="440" z="10" freezeLabel="false" prefix="M" uuid="{ma3}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-MA3</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-60" y="-2" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_ma3}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-MA3</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <inputs><input x="500" y="230" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Bold">MOTOR 3 (DOL)</input></inputs>
+
+            <!-- ========== MOTOR 4 (DOL) ========== -->
+            <element type="embed://import/10_electric/10_allpole/200_fuses_protective_gears/12_magneto_thermal_circuit_breakers/disjoncteur_magneto-thermique.elmt" x="650" y="250" z="10" freezeLabel="false" prefix="Q" uuid="{qa4}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-QA4</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-15" rotation="0" font="Liberation Sans,8,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_qa4}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-QA4</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/02_power_contacts/com_puiss4.elmt" x="650" y="340" z="10" freezeLabel="false" prefix="K" uuid="{km4}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-KM4</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-10" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="7" uuid="{lbl_km4}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-KM4</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/391_consumers_actuators/10_engines/moteur_tri_1.elmt" x="650" y="440" z="10" freezeLabel="false" prefix="M" uuid="{ma4}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-MA4</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-60" y="-2" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_ma4}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-MA4</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <inputs><input x="650" y="230" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Bold">MOTOR 4 (DOL)</input></inputs>
+
+            <!-- ========== MOTOR 5 (DOL) ========== -->
+            <element type="embed://import/10_electric/10_allpole/200_fuses_protective_gears/12_magneto_thermal_circuit_breakers/disjoncteur_magneto-thermique.elmt" x="800" y="250" z="10" freezeLabel="false" prefix="Q" uuid="{qa5}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-QA5</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-15" rotation="0" font="Liberation Sans,8,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_qa5}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-QA5</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/02_power_contacts/com_puiss4.elmt" x="800" y="340" z="10" freezeLabel="false" prefix="K" uuid="{km5}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-KM5</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-10" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="7" uuid="{lbl_km5}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-KM5</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/391_consumers_actuators/10_engines/moteur_tri_1.elmt" x="800" y="440" z="10" freezeLabel="false" prefix="M" uuid="{ma5}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-MA5</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-60" y="-2" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_ma5}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-MA5</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+            <inputs><input x="800" y="230" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Bold">MOTOR 5 (DOL)</input></inputs>
+
+            <!-- ========== MOTOR 6 (ESTRELLA) ========== -->
+            <!-- QA6 -->
+            <element type="embed://import/10_electric/10_allpole/200_fuses_protective_gears/12_magneto_thermal_circuit_breakers/disjoncteur_magneto-thermique.elmt" x="950" y="250" z="10" freezeLabel="false" prefix="Q" uuid="{qa6}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-QA6</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-15" rotation="0" font="Liberation Sans,8,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_qa6}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-QA6</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+
+            <!-- KM6 -->
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/02_power_contacts/com_puiss4.elmt" x="950" y="340" z="10" freezeLabel="false" prefix="K" uuid="{km6}" orientation="0">
+                <elementInformations><elementInformation name="label" show="1">-KM6</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-75" y="-10" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="7" uuid="{lbl_km6}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-KM6</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+
+            <!-- MA6 Motor Estrella (6 bornes) -->
+            <element type="embed://import/10_electric/10_allpole/391_consumers_actuators/10_engines/moteur_tri_de.elmt" x="950" y="440" z="10" freezeLabel="false" prefix="M" uuid="{ma6}" orientation="0">
+                <terminals>
+                    <terminal x="-20" y="-30" id="50" orientation="0"/>
+                    <terminal x="0" y="-30" id="51" orientation="0"/>
+                    <terminal x="20" y="-30" id="52" orientation="0"/>
+                    <terminal x="-20" y="30" id="53" orientation="2"/>
+                    <terminal x="0" y="30" id="54" orientation="2"/>
+                    <terminal x="20" y="30" id="55" orientation="2"/>
+                    <terminal x="26" y="20" id="56" orientation="1"/>
+                </terminals>
+                <elementInformations><elementInformation name="label" show="1">-MA6</elementInformation></elementInformations>
+                <dynamic_texts><dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-60" y="-2" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{lbl_ma6}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop"><text>-MA6</text><info_name>label</info_name></dynamic_elmt_text></dynamic_texts>
+            </element>
+
+            <inputs>
+                <input x="950" y="200" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Bold">MOTOR 6 (CONEXIÓN ESTRELLA)</input>
+                <input x="930" y="530" font="Liberation Sans,8,-1,5,50,0,0,0,0,0,Regular">Puente estrella: U2-V2-W2</input>
+            </inputs>
+
+            <!-- PUENTE ESTRELLA (U2,V2,W2 conectados entre sí) -->
+            <line x1="930" y1="480" x2="970" y2="480" style="line-weight:normal;line-style:normal"/>
+            <line x1="930" y1="495" x2="970" y2="495" style="line-weight:normal;line-style:normal"/>
+            <line x1="930" y1="510" x2="970" y2="510" style="line-weight:normal;line-style:normal"/>
+
+        </elements>
+    </diagram>
+
+    <!-- ============================================= -->
+    <!-- DIAGRAMA 2: CIRCUITO DE CONTROL -->
+    <!-- ============================================= -->
+    <diagram title="Circuito de Control - 6 Motores" cols="20" rows="12" colsize="60" rowsize="80" height="960" width="1200" filename="" order="2" date="11/06/2026" author="Joel Oña" version="0.100.0" freezeNewConductor="false" displayAt="bottom" auto_page_num="2" folio="2/2" displayrows="true" freezeNewElement="false">
+
+        <defaultconductor num="_" conductor_color="" type="multi" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" bicolor="false" condsize="1" numsize="7" tension_protocol="" bus="" dash-size="2" conductor_section="" vertical-alignment="AlignRight" function="" horizontal-alignment="AlignBottom" text_color="#000000" cable="" formula=""/>
+
+        <elements>
+            <inputs>
+                <input x="20" y="20" font="Liberation Sans,12,-1,5,75,0,0,0,0,0,Bold">CIRCUITO DE CONTROL - 6 MOTORES</input>
+                <input x="20" y="40" font="Liberation Sans,10,-1,5,50,0,0,0,0,0,Regular">Autor: Joel Oña | Fecha: Junio 2026</input>
+                <input x="20" y="60" font="Liberation Sans,10,-1,5,50,0,0,0,0,0,Regular">Alimentación Control: 220VAC (L1 - N)</input>
+            </inputs>
+
+            <!-- FUENTE L1 -->
+            <element type="embed://import/10_electric/10_allpole/110_network_supplies/src_3p_pe_n.elmt" x="30" y="100" z="10" freezeLabel="false" prefix="" uuid="{fuente_control}" orientation="0">
+                <terminals>
+                    <terminal x="10" y="-40
